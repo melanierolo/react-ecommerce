@@ -1,0 +1,8 @@
+.shopping {
+  display: flex;
+  align-items: center;
+}
+.shopping__icon {
+  height: 30px;
+  width: 30px;
+}
