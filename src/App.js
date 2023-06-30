@@ -8,14 +8,12 @@ function App() {
   return (
     <div className="App">
       <header>
-        <Logo></Logo>
-        <NavBar></NavBar>
-        <CartWidget></CartWidget>
+        <Logo />
+        <NavBar />
+        <CartWidget />
       </header>
       <main>
-        <ItemListContainer
-          message={"Bienvenidos a mi página 🙂 "}
-        ></ItemListContainer>
+        <ItemListContainer message={"Bienvenidos a mi página 🙂 "} />
       </main>
     </div>
   );
