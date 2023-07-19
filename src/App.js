@@ -24,7 +24,7 @@ function App() {
               path="/category/:idCategory"
               element={<ItemListContainer message={"Productos"} />}
             />
-            <Route path="/item/:idItem" element={<ItemDetailContainer />} />
+            {/*<Route path="/item/:idItem" element={<ItemDetailContainer />} />*/}
           </Routes>
         </main>
       </BrowserRouter>
