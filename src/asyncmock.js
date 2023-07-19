@@ -1,12 +1,12 @@
 const myProducts = [
-  { id: 1, name: "computadora", cost: 2000, idCat: 1 },
-  { id: 2, name: "Gaming Keyboard", cost: 15, idCat: 2 },
-  { id: 3, name: "Apple AirPods ", cost: 128, idCat: 3 },
+  { id: 1, name: "computadora", cost: 2000, idCat: "1" },
+  { id: 2, name: "Gaming Keyboard", cost: 15, idCat: "2" },
+  { id: 3, name: "Apple AirPods ", cost: 128, idCat: "3" },
   {
     id: 4,
     name: "Basics Wireless Computer Mouse with USB",
     cost: 10,
-    idCat: 1,
+    idCat: "1",
   },
 ];
 {

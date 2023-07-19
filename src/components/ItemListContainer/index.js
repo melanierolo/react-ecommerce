@@ -1,16 +1,20 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { getProducts } from "../../asyncmock.js";
+import { getProducts, getProductsByCategory } from "../../asyncmock.js";
 import ItemList from "../ItemList/index.js";
+import { useParams } from "react-router-dom";
 import "./style.css";
 
 export default function ItemListContainer({ message }) {
   const [products, setProducts] = useState([]);
+  const { idCategory } = useParams();
 
-  // Executes once
+  // Manages side effects triggered by changes in idCategory
   useEffect(() => {
-    getProducts().then((response) => setProducts(response));
-  }, []);
+    const functionProducts = idCategory ? getProductsByCategory : getProducts;
+    functionProducts(idCategory).then((response) => setProducts(response));
+  }, [idCategory]);
+
   return (
     <section className="container">
       <h2>{message}</h2>
