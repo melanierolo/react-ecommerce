@@ -21,11 +21,10 @@ function App() {
               element={<ItemListContainer message={"Productos"} />}
             />
             <Route
-              path="/"
-              element={
-                <ItemListContainer message={"Bienvenidos a mi página 🙂 "} />
-              }
+              path="/category/:idCategory"
+              element={<ItemListContainer message={"Productos"} />}
             />
+            <Route path="/item/:idItem" element={<ItemDetailContainer />} />
           </Routes>
         </main>
       </BrowserRouter>
