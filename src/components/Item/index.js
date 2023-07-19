@@ -1,9 +1,11 @@
 import React from "react";
 import "./style.css";
 
-export default function Producto({ name, cost }) {
+export default function Item({ id, name, cost }) {
   return (
-    <div>
+    <div className="card">
+      {" "}
+      <p>{id}</p>
       <p>
         <b>Nombre:</b>
         {name}
@@ -12,6 +14,7 @@ export default function Producto({ name, cost }) {
         <b>Precio:</b>
         {cost}
       </p>
+      <button>Ver detalles</button>
     </div>
   );
 }

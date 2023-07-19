@@ -18,10 +18,14 @@ function App() {
           <Routes>
             <Route
               path="/"
+              element={<ItemListContainer message={"Productos"} />}
+            />
+            <Route
+              path="/"
               element={
                 <ItemListContainer message={"Bienvenidos a mi página 🙂 "} />
               }
-            ></Route>
+            />
           </Routes>
         </main>
       </BrowserRouter>
