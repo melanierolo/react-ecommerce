@@ -7,10 +7,10 @@ export default function NavBar() {
     <nav className="nav">
       <ul className="nav__list">
         <li className="nav__item">
-          <a href="">Nosotros</a>
+          <a href="/">Nosotros</a>
         </li>
         <li className="nav__item">
-          <a href=""> Productos</a>
+          <a href="/"> Productos</a>
           <ul>
             <li className="nav__subitem">
               <a href="">
@@ -30,7 +30,7 @@ export default function NavBar() {
           </ul>
         </li>
         <li className="nav__item">
-          <a href="">Contáctanos</a>
+          <a href="/">Contáctanos</a>
         </li>
       </ul>
     </nav>
