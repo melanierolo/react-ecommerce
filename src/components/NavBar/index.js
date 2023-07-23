@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./style.css";
 
 export default function NavBar() {
@@ -9,16 +10,22 @@ export default function NavBar() {
           <a href="">Nosotros</a>
         </li>
         <li className="nav__item">
-          <a href="">Productos</a>
+          <a href=""> Productos</a>
           <ul>
             <li className="nav__subitem">
-              <a href="">Computadoras</a>
+              <a href="">
+                <NavLink to="/category/1">Computadoras</NavLink>
+              </a>
             </li>
             <li className="nav__subitem">
-              <a href="">Periféricos</a>
+              <a href="">
+                <NavLink to="/category/2">Periféricos</NavLink>
+              </a>
             </li>
             <li className="nav__subitem">
-              <a href="">Extra</a>
+              <a href="">
+                <NavLink to="/category/3">Extra</NavLink>
+              </a>
             </li>
           </ul>
         </li>

@@ -6,7 +6,7 @@ const myProducts = [
     id: 4,
     name: "Basics Wireless Computer Mouse with USB",
     cost: 10,
-    idCat: "1",
+    idCat: "2",
   },
 ];
 {
