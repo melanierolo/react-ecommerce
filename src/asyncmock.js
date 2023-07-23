@@ -1,12 +1,35 @@
 const myProducts = [
-  { id: 1, name: "computadora", cost: 2000, idCat: "1" },
-  { id: 2, name: "Gaming Keyboard", cost: 15, idCat: "2" },
-  { id: 3, name: "Apple AirPods ", cost: 128, idCat: "3" },
   {
-    id: 4,
+    id: "1",
+    name: "Computadora",
+    cost: 2000,
+    idCat: "1",
+    productDescription:
+      "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. ",
+  },
+  {
+    id: "2",
+    name: "Gaming Keyboard",
+    cost: 15,
+    idCat: "2",
+    productDescription:
+      "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested by Cicero are also reproduced in their exact original form",
+  },
+  {
+    id: "3",
+    name: "Apple AirPods ",
+    cost: 128,
+    idCat: "3",
+    productDescription:
+      "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+  },
+  {
+    id: "4",
     name: "Basics Wireless Computer Mouse with USB",
     cost: 10,
     idCat: "2",
+    productDescription:
+      " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages",
   },
 ];
 {
