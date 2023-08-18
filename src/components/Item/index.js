@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./style.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './style.css';
 
-export default function Item({ id, name, cost }) {
+export default function Item({ id, name, price }) {
   return (
-    <div className="card">
-      {" "}
+    <div className='card'>
+      {' '}
       <p>{id}</p>
       <p>
         <b>Nombre:</b>
@@ -13,7 +13,7 @@ export default function Item({ id, name, cost }) {
       </p>
       <p>
         <b>Precio:</b>
-        {cost}
+        {price}
       </p>
       <Link to={`/item/${id}`}>Ver detalles</Link>
     </div>

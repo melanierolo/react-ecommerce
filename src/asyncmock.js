@@ -2,7 +2,7 @@ const myProducts = [
   {
     id: '1',
     name: 'Computadora',
-    cost: 2000,
+    price: 2000,
     stock: 10,
     idCat: '1',
     productDescription:
@@ -11,7 +11,7 @@ const myProducts = [
   {
     id: '2',
     name: 'Gaming Keyboard',
-    cost: 15,
+    price: 15,
     stock: 20,
     idCat: '2',
     productDescription:
@@ -20,7 +20,7 @@ const myProducts = [
   {
     id: '3',
     name: 'Apple AirPods ',
-    cost: 128,
+    price: 128,
     stock: 4,
     idCat: '3',
     productDescription:
@@ -29,7 +29,7 @@ const myProducts = [
   {
     id: '4',
     name: 'Basics Wireless Computer Mouse with USB',
-    cost: 10,
+    price: 10,
     stock: 15,
     idCat: '2',
     productDescription:

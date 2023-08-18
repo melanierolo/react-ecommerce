@@ -5,30 +5,33 @@ import CartWidget from './components/CardWidget';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailsContainer from './components/ItemDetailsContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
 
 function App() {
   return (
     <div className='App'>
       <BrowserRouter>
-        <header>
-          <Logo />
-          <NavBar />
-          <CartWidget />
-        </header>
-        <main>
-          <Routes>
-            <Route
-              path='/'
-              element={<ItemListContainer message={'Productos'} />}
-            />
-            <Route
-              path='/category/:idCategory'
-              element={<ItemListContainer message={'Productos'} />}
-            />
-            <Route path='/item/:idItem' element={<ItemDetailsContainer />} />
-            <Route path='*' element={<h2>404 Page not Found</h2>} />
-          </Routes>
-        </main>
+        <CartProvider>
+          <header>
+            <Logo />
+            <NavBar />
+            <CartWidget />
+          </header>
+          <main>
+            <Routes>
+              <Route
+                path='/'
+                element={<ItemListContainer message={'Productos'} />}
+              />
+              <Route
+                path='/category/:idCategory'
+                element={<ItemListContainer message={'Productos'} />}
+              />
+              <Route path='/item/:idItem' element={<ItemDetailsContainer />} />
+              <Route path='*' element={<h2>404 Page not Found</h2>} />
+            </Routes>
+          </main>
+        </CartProvider>
       </BrowserRouter>
     </div>
   );
