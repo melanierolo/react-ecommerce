@@ -1,35 +1,39 @@
 const myProducts = [
   {
-    id: "1",
-    name: "Computadora",
+    id: '1',
+    name: 'Computadora',
     cost: 2000,
-    idCat: "1",
+    stock: 10,
+    idCat: '1',
     productDescription:
       "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. ",
   },
   {
-    id: "2",
-    name: "Gaming Keyboard",
+    id: '2',
+    name: 'Gaming Keyboard',
     cost: 15,
-    idCat: "2",
+    stock: 20,
+    idCat: '2',
     productDescription:
-      "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested by Cicero are also reproduced in their exact original form",
+      'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested by Cicero are also reproduced in their exact original form',
   },
   {
-    id: "3",
-    name: "Apple AirPods ",
+    id: '3',
+    name: 'Apple AirPods ',
     cost: 128,
-    idCat: "3",
+    stock: 4,
+    idCat: '3',
     productDescription:
-      "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+      'The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.',
   },
   {
-    id: "4",
-    name: "Basics Wireless Computer Mouse with USB",
+    id: '4',
+    name: 'Basics Wireless Computer Mouse with USB',
     cost: 10,
-    idCat: "2",
+    stock: 15,
+    idCat: '2',
     productDescription:
-      " It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages",
+      ' It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages',
   },
 ];
 {
