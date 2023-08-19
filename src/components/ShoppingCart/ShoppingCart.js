@@ -20,7 +20,7 @@ function ShoppingCart() {
         <div>
           <h2>Productos</h2>
           {cart.map((product) => (
-            <ShoppingItem key={product.id} {...product} />
+            <ShoppingItem key={product.item.id} {...product} />
           ))}
         </div>
         <button onClick={() => clearCart()}>Eliminar Todo</button>

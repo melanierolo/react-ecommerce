@@ -1,4 +1,4 @@
-import { useState, createContext } from 'react';
+import { useState, createContext, useEffect } from 'react';
 
 // 1-Create the context and give it a default value
 export const CartContext = createContext({
@@ -7,13 +7,20 @@ export const CartContext = createContext({
   numberOfProducts: 0,
 });
 
+// Local storage
+const cartBeginning = JSON.parse(localStorage.getItem('cartBeginning')) || [];
+console.log('cartBeginning', cartBeginning);
+const cartTotal = JSON.parse(localStorage.getItem('cartTotal')) || 0;
+const cartNumberProducts =
+  JSON.parse(localStorage.getItem('cartNumberProducts')) || 0;
+
 export const CartProvider = ({ children }) => {
   // create state for cart, total, and totalQuantity
-  const [cart, setCart] = useState([]);
-  const [total, setTotal] = useState(0);
-  const [numberOfProducts, setNumberOfProducts] = useState(0);
+  const [cart, setCart] = useState(cartBeginning);
+  const [total, setTotal] = useState(cartTotal);
+  const [numberOfProducts, setNumberOfProducts] = useState(cartNumberProducts);
 
-  console.log(cart);
+  console.log('cart', cart, numberOfProducts);
 
   // add some methods to manipulate the shopping cart
   const isInCart = (itemId) => {
@@ -61,6 +68,16 @@ export const CartProvider = ({ children }) => {
     setNumberOfProducts(0);
     setTotal(0);
   };
+
+  /*---Local Storage---*/
+  useEffect(() => {
+    localStorage.setItem('cartBeginning', JSON.stringify(cart));
+    localStorage.setItem('cartTotal', JSON.stringify(total));
+    localStorage.setItem(
+      'cartNumberProducts',
+      JSON.stringify(numberOfProducts)
+    );
+  }, [cart, total, numberOfProducts]);
 
   return (
     <CartContext.Provider

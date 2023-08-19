@@ -5,7 +5,7 @@ import { CartContext } from '../../context/CartContext';
 import { useContext } from 'react';
 
 export default function ItemDetails(data) {
-  console.log(data);
+  console.log('data', data);
   // Add product
   const [addQuantity, setAddQuantity] = useState(0);
 
