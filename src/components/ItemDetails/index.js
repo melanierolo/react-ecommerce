@@ -27,7 +27,7 @@ export default function ItemDetails(data) {
       <h3>Precio($dólar):</h3>
       <p>{data.price}</p>
       <h3>Descripción del producto:</h3>
-      <p>{data.productDescription}</p>
+      <p>{data.description}</p>
       <ItemCount
         start={1}
         stock={data.stock}

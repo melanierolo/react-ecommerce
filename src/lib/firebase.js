@@ -5,6 +5,8 @@ import {
   collection,
   getFirestore,
   getDocs,
+  doc,
+  getDoc,
   orderBy,
   query,
   where,
@@ -35,6 +37,10 @@ export const auth = getAuth(app);
 const db = getFirestore();
 
 /* ------------Products-------------*/
+/* idCat:
+1: computers, 2: Peripherals 3: extra
+*/
+
 // collection ref
 const colRef = collection(db, 'products');
 
@@ -44,10 +50,18 @@ const queryOrdenById = query(colRef, orderBy('id', 'asc'));
 // database firestore - collection data
 export const getProducts = async () => getDocs(queryOrdenById);
 
+// Function that returns a whole category
 export const getProductsByIdCategory = async (idCategory) => {
   const queryByIdCategory = query(
     colRef,
     where('idCategory', '==', idCategory)
   );
   return getDocs(queryByIdCategory);
+};
+
+// Function to get a single product
+export const getOneProduct = (id) => {
+  console.log('getOneProduct', id);
+  const productRef = doc(db, 'products', id);
+  return getDoc(productRef);
 };
