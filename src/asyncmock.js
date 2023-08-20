@@ -5,7 +5,7 @@ const myProducts = [
     price: 2000,
     stock: 10,
     idCat: '1',
-    productDescription:
+    product:
       "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. ",
   },
   {
@@ -36,11 +36,11 @@ const myProducts = [
       ' It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages',
   },
 ];
-{
-  /*idCat:
+
+/*idCat:
 1: computers, 2: Peripherals 3: extra
 */
-}
+
 export const getProducts = () => {
   return new Promise((res, rej) => {
     setTimeout(() => {

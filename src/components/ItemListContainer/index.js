@@ -1,9 +1,9 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { getProducts, getProductsByCategory } from "../../asyncmock.js";
-import ItemList from "../ItemList/index.js";
-import { useParams } from "react-router-dom";
-import "./style.css";
+import React from 'react';
+import { useState, useEffect } from 'react';
+import { getProducts, getProductsByCategory } from '../../lib/firebase.js';
+import ItemList from '../ItemList/index.js';
+import { useParams } from 'react-router-dom';
+import './style.css';
 
 export default function ItemListContainer({ message }) {
   const [products, setProducts] = useState([]);
@@ -11,12 +11,27 @@ export default function ItemListContainer({ message }) {
 
   // Manages side effects triggered by changes in idCategory
   useEffect(() => {
-    const functionProducts = idCategory ? getProductsByCategory : getProducts;
-    functionProducts(idCategory).then((response) => setProducts(response));
+    let products = [];
+
+    if (idCategory) {
+      getProductsByCategory(idCategory).then((response) => {
+        response.docs.forEach((doc) => {
+          products.push({ ...doc.data(), id: doc.id });
+        });
+        setProducts(products);
+      });
+    } else {
+      getProducts().then((response) => {
+        response.docs.forEach((doc) => {
+          products.push({ ...doc.data(), id: doc.id });
+        });
+        setProducts(products);
+      });
+    }
   }, [idCategory]);
 
   return (
-    <section className="container">
+    <section className='container'>
       <h2>{message}</h2>
       {/* I'll pass the products as a pro */}
       <ItemList products={products} />
