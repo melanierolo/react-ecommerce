@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import { getProducts, getProductsByCategory } from '../../lib/firebase.js';
+import { getProducts, getProductsByIdCategory } from '../../lib/firebase.js';
 import ItemList from '../ItemList/index.js';
 import { useParams } from 'react-router-dom';
 import './style.css';
@@ -14,7 +14,7 @@ export default function ItemListContainer({ message }) {
     let products = [];
 
     if (idCategory) {
-      getProductsByCategory(idCategory).then((response) => {
+      getProductsByIdCategory(idCategory).then((response) => {
         response.docs.forEach((doc) => {
           products.push({ ...doc.data(), id: doc.id });
         });

@@ -44,7 +44,7 @@ const queryOrdenById = query(colRef, orderBy('id', 'asc'));
 // database firestore - collection data
 export const getProducts = async () => getDocs(queryOrdenById);
 
-export const getProductsByCategory = async (idCategory) => {
+export const getProductsByIdCategory = async (idCategory) => {
   const queryByIdCategory = query(
     colRef,
     where('idCategory', '==', idCategory)
