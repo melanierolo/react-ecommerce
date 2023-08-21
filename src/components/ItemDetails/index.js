@@ -3,6 +3,7 @@ import ItemCount from '../ItemCount/ItemCount';
 import React from 'react';
 import { CartContext } from '../../context/CartContext';
 import { useContext } from 'react';
+import './style.css';
 
 export default function ItemDetails(data) {
   // Add product
@@ -19,7 +20,7 @@ export default function ItemDetails(data) {
   };
 
   return (
-    <div>
+    <div className='itemDetails'>
       <h2>{data.name}</h2>
       <h3>Precio($dólar):</h3>
       <p>{data.price}</p>
