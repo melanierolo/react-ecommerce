@@ -8,11 +8,9 @@ export default function ItemDetailsContainer() {
   const { idItem } = useParams();
 
   useEffect(() => {
-    console.log(typeof idItem, idItem);
     getOneProduct(idItem).then((result) => {
       const data = result.data();
       const product = { id: result.id, ...data };
-      console.log('ItemDetailsContainer', product);
       setProduct(product);
     });
   }, [idItem]);

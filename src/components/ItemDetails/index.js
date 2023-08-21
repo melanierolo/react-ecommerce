@@ -5,7 +5,6 @@ import { CartContext } from '../../context/CartContext';
 import { useContext } from 'react';
 
 export default function ItemDetails(data) {
-  console.log('data', data);
   // Add product
   const [addQuantity, setAddQuantity] = useState(0);
 
@@ -15,9 +14,7 @@ export default function ItemDetails(data) {
   // amount handler
   const amountHandler = (amount) => {
     setAddQuantity(amount);
-    console.log('products added:', amount);
     const item = { id: data.id, name: data.name, price: data.price };
-    console.log('item', item, 'amount', amount);
     addProduct(item, amount);
   };
 

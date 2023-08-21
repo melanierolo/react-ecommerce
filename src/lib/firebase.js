@@ -62,7 +62,6 @@ export const getProductsByIdCategory = async (idCategory) => {
 
 // Function to get a single product
 export const getOneProduct = (id) => {
-  console.log('getOneProduct', id);
   const productRef = doc(db, 'products', id);
   return getDoc(productRef);
 };

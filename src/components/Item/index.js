@@ -18,7 +18,6 @@ export default function Item({ id, name, price, brand, imgUrl }) {
     fetchImageUrl();
   }, [imgUrl]);
 
-  console.log(imageUrl);
   return (
     <div className='card'>
       <picture>

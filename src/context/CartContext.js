@@ -9,7 +9,6 @@ export const CartContext = createContext({
 
 // Local storage
 const cartBeginning = JSON.parse(localStorage.getItem('cartBeginning')) || [];
-console.log('cartBeginning', cartBeginning);
 const cartTotal = JSON.parse(localStorage.getItem('cartTotal')) || 0;
 const cartNumberProducts =
   JSON.parse(localStorage.getItem('cartNumberProducts')) || 0;
@@ -19,8 +18,6 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState(cartBeginning);
   const [total, setTotal] = useState(cartTotal);
   const [numberOfProducts, setNumberOfProducts] = useState(cartNumberProducts);
-
-  console.log('cart', cart, numberOfProducts);
 
   // add some methods to manipulate the shopping cart
   const isInCart = (itemId) => {
