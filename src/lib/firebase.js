@@ -11,6 +11,7 @@ import {
   query,
   where,
 } from 'firebase/firestore';
+import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -65,3 +66,11 @@ export const getOneProduct = (id) => {
   const productRef = doc(db, 'products', id);
   return getDoc(productRef);
 };
+
+// get URL of a image
+export async function getUrlImage(fileLocation) {
+  const storage = getStorage();
+  const imageRef = ref(storage, fileLocation);
+  const url = await getDownloadURL(imageRef);
+  return url;
+}
