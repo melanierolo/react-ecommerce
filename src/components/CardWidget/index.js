@@ -17,7 +17,7 @@ export default function CardWidget() {
           alt='icon shopping cart'
         />
       </Link>
-      <div class='shopping__number-products'>
+      <div className='shopping__number-products'>
         <p className='shopping__product-count'>
           <strong>{numberOfProducts}</strong>
         </p>

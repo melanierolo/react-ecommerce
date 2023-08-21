@@ -31,7 +31,9 @@ function ShoppingCart() {
         <p>Subtotal :${total}</p>
         <p>Envío : $9 </p>
         <p>Total :${total + 9}</p>
-        <button onClick={clearCart}>Finalizar compra</button>
+        <Link to='/checkout'>
+          <button>Finalizar compra</button>
+        </Link>
       </div>
     </>
   );

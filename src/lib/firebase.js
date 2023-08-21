@@ -10,6 +10,9 @@ import {
   orderBy,
   query,
   where,
+  Timestamp,
+  updateDoc,
+  addDoc,
 } from 'firebase/firestore';
 import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 
@@ -73,3 +76,27 @@ export async function getUrlImage(fileLocation) {
   const url = await getDownloadURL(imageRef);
   return url;
 }
+// Function to add an order to the database
+
+export const addOrder = (
+  cart,
+  total,
+  numberOfProducts,
+  firstName,
+  lastName,
+  email
+) => {
+  const orderRef = collection(db, 'orders');
+  const postDate = Timestamp.now();
+
+  // object with all the order purchase details
+  return addDoc(orderRef, {
+    order_products: cart,
+    order_numberProducts: numberOfProducts,
+    order_total: total,
+    order_createdAt: postDate,
+    client_name: firstName,
+    client_lastName: lastName,
+    client_email: email,
+  });
+};

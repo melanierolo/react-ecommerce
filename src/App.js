@@ -5,6 +5,7 @@ import CartWidget from './components/CardWidget';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailsContainer from './components/ItemDetailsContainer';
 import ShoppingCart from './components/ShoppingCart/ShoppingCart';
+import Checkout from './components/Checkout/index';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
 
@@ -30,6 +31,7 @@ function App() {
               />
               <Route path='/item/:idItem' element={<ItemDetailsContainer />} />
               <Route path='/cart' element={<ShoppingCart />} />
+              <Route path='/checkout' element={<Checkout />} />
               <Route path='*' element={<h2>404 Page not Found</h2>} />
             </Routes>
           </main>
