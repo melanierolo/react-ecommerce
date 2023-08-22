@@ -28,3 +28,7 @@ los siguientes pasos:
 3. Ejecuta el comando `npm install` para instalar las dependencias.
 4. Ejecuta el comando `npm run dev` para iniciar la aplicación.
 5. Abre tu navegador y navega a http://localhost:5173 para ver la aplicación en acción.
+
+## VIDEO :
+
+- [Demo - loom](https://www.loom.com/share/ff82b528f8d84a7182b3681d7de89274?sid=2f20354c-0fe6-4e7e-a4c8-987fbb2b019f)
