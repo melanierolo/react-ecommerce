@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../context/CartContext';
 import { addOrder } from '../../lib/firebase';
+import './style.css';
 
 const Checkout = () => {
   const [firstName, setFirstName] = useState('');
@@ -49,56 +50,82 @@ const Checkout = () => {
   }
 
   return (
-    <div>
-      <h2> Checkout </h2>
-      <hr />
-      <h3>Total:</h3>
-      <p>{total}</p>
-      <h3>Número de Productos:</h3>
-      <p>{numberOfProducts}</p>
-      <h2>Finalizar compra</h2>
-      <hr />
-      <form onSubmit={handleSubmit}>
-        <div className='form-group'>
-          <label htmlFor=''> Name </label>
-          <input
-            type='text'
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-          />
-        </div>
+    <div className='checkout'>
+      <div className='checkout__summary'>
+        <h2 className='checkout__title'> Checkout </h2>
+        <h4>Total:</h4>
+        <p>{total}</p>
+        <h4>Número de Productos:</h4>
+        <p>{numberOfProducts}</p>
+      </div>
+      <div className='finalize'>
+        {' '}
+        <h2 className='finalize__title'>Finalizar compra</h2>
+        <form className='finalize__form' onSubmit={handleSubmit}>
+          <div className='form-group'>
+            <label className='form-group__label' htmlFor=''>
+              {' '}
+              Name{' '}
+            </label>
+            <input
+              className='form-group__input'
+              type='text'
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+            />
+          </div>
 
-        <div className='form-group'>
-          <label htmlFor=''> Last Name </label>
-          <input
-            type='text'
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
-          />
-        </div>
+          <div className='form-group'>
+            <label className='form-group__label' htmlFor=''>
+              {' '}
+              Last Name{' '}
+            </label>
+            <input
+              className='form-group__input'
+              type='text'
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+            />
+          </div>
 
-        <div className='form-group'>
-          <label htmlFor=''> Email </label>
-          <input
-            type='email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
+          <div className='form-group'>
+            <label className='form-group__label' htmlFor=''>
+              {' '}
+              Email{' '}
+            </label>
+            <input
+              className='form-group__input'
+              type='email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
-        <div className='form-group'>
-          <label htmlFor=''> Email Confirmación </label>
-          <input
-            type='email'
-            value={emailConfirmation}
-            onChange={(e) => setEmailConfirmation(e.target.value)}
-          />
-        </div>
+          <div className='form-group'>
+            <label className='form-group__label' htmlFor=''>
+              {' '}
+              Email Confirmación{' '}
+            </label>
+            <input
+              className='form-group__input'
+              type='email'
+              value={emailConfirmation}
+              onChange={(e) => setEmailConfirmation(e.target.value)}
+            />
+          </div>
 
-        {error && <p style={{ color: 'red' }}> {error} </p>}
+          {error && (
+            <p className='error-message' style={{ color: 'red' }}>
+              {' '}
+              {error}{' '}
+            </p>
+          )}
 
-        <button type='submit'>Comprar</button>
-      </form>
+          <button type='submit' className='purchase-button'>
+            Comprar
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

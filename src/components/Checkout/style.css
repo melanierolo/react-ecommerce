@@ -1,0 +1,71 @@
+/* Block */
+.checkout {
+  margin: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+/* Element */
+.checkout__summary {
+  flex: 2;
+  font-size: 1.2rem;
+}
+/* Element */
+.checkout__title,
+.finalize__title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* Block */
+.finalize {
+  flex: 4;
+  font-size: 1.5rem;
+}
+
+/* Element */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Element */
+.form-group__label {
+  width: 100%;
+  text-align: left;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+/* Element */
+.form-group__input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Element */
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+/* Element */
+.purchase-button {
+  width: 100%;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.purchase-button:hover {
+  background-color: #2980b9;
+}
