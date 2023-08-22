@@ -1,0 +1,44 @@
+/* BEM Block */
+.shopping-cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  background-color: white;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* BEM__Elements */
+.shopping-cart-item__name {
+  flex: 2;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.shopping-cart-item__quantity {
+  flex: 1;
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+.shopping-cart-item__price {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.shopping-cart-item__button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* BEM --Modifier */
+.shopping-cart-item--highlighted {
+  background-color: #f9f9f9;
+}
